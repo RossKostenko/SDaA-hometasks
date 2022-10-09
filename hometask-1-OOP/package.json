@@ -17,5 +17,8 @@
     "ts-jest": "^26.4.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "prettier": "^2.7.1"
   }
 }
