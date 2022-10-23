@@ -48,6 +48,6 @@ export class Point {
 	}
 
 	private calculateDistance(x: number, y: number): number {
-		return Math.round(Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) * 10) / 10;
+		return Math.round(Math.hypot(x, y) * 10) / 10;
 	}
 }
