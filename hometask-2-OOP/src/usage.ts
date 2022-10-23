@@ -1,3 +1,9 @@
+import { Inventory } from './Inventory';
+import { Item } from './Item';
+import { Sword } from './Sword';
+import { Pizza } from './Pizza';
+import { ItemWeightComparator } from './ItemWeightComparator';
+
 // Create the inventory
 const inventory: Inventory = new Inventory();
 
@@ -5,7 +11,8 @@ const inventory: Inventory = new Inventory();
 const a: Item = new Sword(30.4219, 0.7893, 300, 2.032);
 const b: Item = new Sword(40, 0.7893, 200, 2);
 const c: Item = new Sword(40, 1, 100, 3);
-const pizza: Item = new Pizza(12, false);
+//chaged due to UML
+const pizza: Item = new Pizza('Quatro Formaggi', 1, 10, true, 6);
 
 // Add the items to the inventory
 inventory.addItem(a);
