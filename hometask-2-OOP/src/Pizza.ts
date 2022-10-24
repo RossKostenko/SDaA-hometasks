@@ -5,7 +5,7 @@ export class Pizza extends Consumable {
 		super(name, value, weight, spoiled);
 	}
 
-	public eat(): string {
+	protected eat(): string {
 		if (this.numberOfSlices <= 0) {
 			throw new Error('Pizza Eat Call');
 		}

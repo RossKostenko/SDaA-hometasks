@@ -21,5 +21,5 @@ export abstract class Consumable extends Item {
 		return this.eat();
 	}
 
-	abstract eat(): string;
+	protected abstract eat(): string;
 }
