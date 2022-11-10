@@ -19,12 +19,13 @@ interface SearchProps {
 
 // OR store can be global
 
-export const Search: FC<SearchProps> = props => {
+export const Search: FC<SearchProps> = ({ updateStore }) => {
   const [searchedValue, setSearchedValue] = useState('');
 
   const onChange = value => {
     console.log(value); // for debugging
     setSearchedValue(value);
+    updateStore(value);
   };
 
   return (
