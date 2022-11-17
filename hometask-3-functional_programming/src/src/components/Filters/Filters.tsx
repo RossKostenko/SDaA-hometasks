@@ -26,7 +26,7 @@ const OPTIONS = [
   },
 ];
 
-export const Filters: FC<FiltersProps> = props => {
+export const Filters: FC<FiltersProps> = ({ updateStore }) => {
   const [selectedFilter, setSelectedFilter] = useState<string[]>([]);
 
   const onChange = ({ title }) => {
@@ -41,6 +41,7 @@ export const Filters: FC<FiltersProps> = props => {
     }
 
     setSelectedFilter(updatedFilters);
+    updateStore(updatedFilters);
   };
 
   return (
