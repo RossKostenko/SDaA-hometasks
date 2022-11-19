@@ -14,7 +14,6 @@ export class ShipmentSateBuilder {
 	}
 
 	weigths(weight: number) {
-		this.shipmentState.shipmentId = Math.round(Math.random() * 1000000000000);
 		this.shipmentState.weight = weight
 		return this
 	}
