@@ -1,3 +1,4 @@
+import { PackageType } from '../enums';
 import { ShipmentSate } from './shipment-state'
 
 export class ShipmentSateBuilder {
@@ -11,6 +12,11 @@ export class ShipmentSateBuilder {
 
 	get to() {
 		return new DeliveryBuilder(this.shipmentState);
+	}
+
+	ofType(packageType: PackageType) {
+		this.shipmentState.packageType = packageType;
+		return this;
 	}
 
 	weigths(weight: number) {
