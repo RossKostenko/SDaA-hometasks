@@ -1,7 +1,6 @@
-import { GUI } from './gui'
+import { GUI } from './gui/gui'
 
 export class Client {
-	// private _shipment: Shipment;
 	private static client: Client;
 
 	constructor(private gui: GUI) { }
@@ -12,5 +11,13 @@ export class Client {
 		}
 
 		return this.client
+	}
+
+	ship(): string {
+		if (!this.gui) {
+			throw new Error('No GUI has been provided');
+		}
+
+		return this.gui.ship()
 	}
 }
