@@ -1,17 +1,7 @@
 import { PackageType, ShipmentCost } from "../../enums";
 import { Shipper } from "./shipper";
 
-class ChicagoSprintShipper extends Shipper {
-	private static _shipper: ChicagoSprintShipper;
-
-	public static getInstance() {
-		if (!this._shipper) {
-			this._shipper = new ChicagoSprintShipper();
-		}
-
-		return this._shipper
-	}
-
+export class ChicagoSprintShipper extends Shipper {
 	getCost(packageType: PackageType, weight: number): number {
 		if (packageType === PackageType.LETTER) {
 			return weight * ShipmentCost.CHICAGOSPRINTLETTER;
@@ -20,5 +10,3 @@ class ChicagoSprintShipper extends Shipper {
 		return weight * ShipmentCost.CHICAGOSPRINTPACKAGE;
 	}
 }
-
-export const chicagoSprintShipper = ChicagoSprintShipper.getInstance();
