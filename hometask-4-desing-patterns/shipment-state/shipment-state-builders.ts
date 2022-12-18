@@ -1,4 +1,4 @@
-import { PackageType } from '../enums';
+import { Mark, PackageType } from '../enums';
 import { ShipmentSate } from './shipment-state'
 
 export class ShipmentSateBuilder {
@@ -22,6 +22,11 @@ export class ShipmentSateBuilder {
 	weigths(weight: number) {
 		this.shipmentState.weight = weight
 		return this
+	}
+
+	markIt(value: Mark) {
+		this.shipmentState.mark = value;
+		return this;
 	}
 
 	build() {
